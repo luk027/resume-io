@@ -29,7 +29,7 @@ const HomePage = () => {
                         <p className="text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Rise above the rest with professional resume templates.</p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <span onClick={() => navigate('/createResume')} className="cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create My Resume</span>
-                            <a href="https://github.com/luk027" target='_blank'><span className="cursor-pointer text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></span></a>
+                            <a href="https://github.com/luk027" target='_blank'><span className="cursor-pointer text-sm/6 font-semibold text-gray-900 hover:text-gray-400">Learn more <span aria-hidden="true">→</span></span></a>
                         </div>
                     </div>
                 </div>

@@ -1,44 +1,44 @@
 {
     "personalInfo": {
-        "name": "Jhon Doe",
-        "jobTitle": "Java developer",
-        "phone": "9727-007-1234",
-        "email": "jhon.d@email.com",
-        "linkedIn": "jhondoe",
-        "place": "New Delhi 110051",
-        "careerObjective": " Experienced Java developer with four years of experience in Java application development seeking full-time employment with a growing and fast-paced software startup. Proficient in decreasing the startup time for Java-powered applications by 60%."
+        "name": "Alex Smith",
+        "jobTitle": "Software Engineer",
+        "phone": "9876-543-210",
+        "email": "alex.smith@email.com",
+        "linkedIn": "alexsmith",
+        "place": "Mumbai, India",
+        "careerObjective": "Passionate Software Engineer with five years of experience in full-stack development, seeking an opportunity to contribute to innovative projects in a dynamic environment."
     },
     "education": [
         {
-            "degree": "B.Tech Information Technology",
-            "collage": "Savita Devi Engineering College, Karnataka",
-            "cgpa": "8.02",
-            "startYear": "2014",
-            "endYear": "2018"
+            "degree": "B.E. Computer Science",
+            "college": "Tech Valley Institute, Maharashtra",
+            "cgpa": "8.5",
+            "startYear": "2013",
+            "endYear": "2017"
         }
     ],
     "workExperience": [
         {
-            "jobTitle": "Java developer",
-            "company": "Magmum Tech Private Ltd",
-            "startYear": "2019",
-            "endYear": "2021",
-            "place": "Banglore",
-            "workSummary": "Performed unit testing of Java applications by applying test cases in Junit.Improved code inefficiency that resulted in a 25% increase in mobile application stability"
+            "jobTitle": "Software Engineer",
+            "company": "InnoTech Solutions",
+            "startYear": "2018",
+            "endYear": "2023",
+            "place": "Pune",
+            "workSummary": "Developed and optimized web applications using JavaScript and React. Led a team in implementing microservices architecture, improving application scalability by 40%."
         }
     ],
     "skills": [
         {
-            "skill": "Java"
+            "skill": "JavaScript"
         },
         {
-            "skill": "OOPs"
+            "skill": "React.js"
         },
         {
-            "skill": "SQL"
+            "skill": "Node.js"
         },
         {
-            "skill": "Springboot"
+            "skill": "MongoDB"
         }
     ]
 }

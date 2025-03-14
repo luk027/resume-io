@@ -39,14 +39,14 @@ const FormSection = () => {
               color="neutral"
               onClick={() => setOpen(true)}
             >
-             <span className="text-indigo-600">Show Preview</span> 
+             <span className="text-indigo-600">Live Preview</span> 
             </Button>
             <Drawer
               open={open}
               onClose={() => setOpen(false)}
               slotProps={{ content: { sx: { width: "100%" } } }}
             >
-              <div className="bg-amber-500">
+              <div className="bg-linear-to-tr from-[#ff80b5] to-[#9089fc]"> 
                 <ModalClose />
                 <div className='flex justify-start items-center pl-2 my-2 gap-4'>
             <span onClick={() => reactToPrintFn()} className="cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">

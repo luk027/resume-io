@@ -27,7 +27,7 @@ const GenerateResume = () => {
 
       {/* FORMS */}
       {/* <div className='p-4'> */}
-      <div className='md:h-screen  overflow-y-scroll no-scrollbar bg-white/70 backdrop-blur-sm'>
+      <div className='md:h-screen  overflow-y-scroll no-scrollbar md:bg-white/70 backdrop-blur-sm'>
         <FormSection />
       </div>
       {/* </div> */}
