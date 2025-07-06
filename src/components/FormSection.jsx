@@ -4,15 +4,15 @@ import EducationFrom from "./formElements/EducationFrom";
 import { useNavigate } from "react-router-dom";
 import WorkExpForm from "./formElements/WorkExpForm";
 import SkillsForm from "./formElements/SkillsForm";
-import Box from "@mui/joy/Box";
 import Button from "@mui/joy/Button";
 import Drawer from "@mui/joy/Drawer";
 import DialogTitle from "@mui/joy/DialogTitle";
 import ModalClose from "@mui/joy/ModalClose";
 import ResumeTemplate from "./ResumeTemplate";
 import { useMediaQuery } from "@mui/material";
-import { useReactToPrint } from 'react-to-print'
-import { RWebShare } from 'react-web-share'
+import { useReactToPrint } from "react-to-print";
+import { RWebShare } from "react-web-share";
+import { HiArrowLeft, HiEye, HiDownload, HiShare } from "react-icons/hi";
 
 const FormSection = () => {
   const navigate = useNavigate();
@@ -22,69 +22,105 @@ const FormSection = () => {
   const reactToPrintFn = useReactToPrint({ contentRef });
 
   return (
-    <div className="p-4">
-      {/* back to home btn  */}
-      <div className="flex justify-between">
-        <span
-          onClick={() => navigate("/")}
-          className="text-sm cursor-pointer font-semibold text-indigo-600"
-        >
-          <span aria-hidden="true">&larr;</span> Go back home
-        </span>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Header */}
+      <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-sm border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Back Button */}
+            <button
+              onClick={() => navigate("/")}
+              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors focus-visible-ring rounded-lg px-3 py-2"
+            >
+              <HiArrowLeft className="w-5 h-5" />
+              <span className="font-medium">Back to Home</span>
+            </button>
 
-        {isMobile && (
-          <Box sx={{ display: "flex" }}>
-            <Button
-              variant="outlined"
-              color="neutral"
-              onClick={() => setOpen(true)}
-            >
-             <span className="text-indigo-600">Live Preview</span> 
-            </Button>
-            <Drawer
-              open={open}
-              onClose={() => setOpen(false)}
-              slotProps={{ content: { sx: { width: "100%" } } }}
-            >
-              <div className="bg-linear-to-tr from-[#ff80b5] to-[#9089fc]"> 
-                <ModalClose />
-                <div className='flex justify-start items-center pl-2 my-2 gap-4'>
-            <span onClick={() => reactToPrintFn()} className="cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-              Download
-            </span>
-            {/* <span className="cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-              Share 🔗
-            </span> */}
-            <RWebShare
-              data={{
-                text: "Resume from Resume.io, an Ultimate Resume Builder.",
-                url: "http://localhost:5173/",
-                // title: 'Resume: '+resumeInfo.personalInfo.name,
-                // html: sharedComponentHtml,
-              }}
-              onClick={() => console.log("shared successfully!")}
-            >
-              <span className="cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                Share 🔗
-              </span>
-            </RWebShare>
+            {/* Mobile Preview Button */}
+            {isMobile && (
+              <Button
+                variant="outlined"
+                color="neutral"
+                onClick={() => setOpen(true)}
+                className="modern-button-secondary"
+                startDecorator={<HiEye className="w-4 h-4" />}
+              >
+                Live Preview
+              </Button>
+            )}
           </div>
-                <div ref={contentRef} className="p-2 mt-1">
-                  <ResumeTemplate />
-                </div>
-              </div>
-            </Drawer>
-          </Box>
-        )}
+        </div>
       </div>
 
-      <PersonalInfoFrom />
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="space-y-8">
+          {/* Form Sections */}
+          <div className="space-y-8">
+            <PersonalInfoFrom />
+            <EducationFrom />
+            <WorkExpForm />
+            <SkillsForm />
+          </div>
+        </div>
+      </div>
 
-      <EducationFrom />
+      {/* Mobile Preview Drawer */}
+      {isMobile && (
+        <Drawer
+          open={open}
+          onClose={() => setOpen(false)}
+          slotProps={{
+            content: {
+              sx: {
+                width: "100%",
+                background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+              },
+            },
+          }}
+        >
+          <div className="h-full flex flex-col">
+            {/* Drawer Header */}
+            <div className="flex items-center justify-between p-4 border-b border-white/20">
+              <DialogTitle className="text-white font-semibold">
+                Resume Preview
+              </DialogTitle>
+              <ModalClose className="text-white" />
+            </div>
 
-      <WorkExpForm />
+            {/* Action Buttons */}
+            <div className="flex items-center justify-center gap-4 p-4 bg-white/10">
+              <button
+                onClick={() => reactToPrintFn()}
+                className="modern-button flex items-center space-x-2"
+              >
+                <HiDownload className="w-4 h-4" />
+                <span>Download</span>
+              </button>
+              <RWebShare
+                data={{
+                  text: "Resume from Resume.io, an Ultimate Resume Builder.",
+                  url: "http://localhost:5173/",
+                  title: "Resume from Resume.io",
+                }}
+                onClick={() => console.log("shared successfully!")}
+              >
+                <button className="modern-button-secondary flex items-center space-x-2">
+                  <HiShare className="w-4 h-4" />
+                  <span>Share</span>
+                </button>
+              </RWebShare>
+            </div>
 
-      <SkillsForm />
+            {/* Resume Preview */}
+            <div className="flex-1 overflow-auto custom-scrollbar p-4">
+              <div ref={contentRef} className="bg-white rounded-lg shadow-lg">
+                <ResumeTemplate />
+              </div>
+            </div>
+          </div>
+        </Drawer>
+      )}
     </div>
   );
 };

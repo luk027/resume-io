@@ -1,44 +1,56 @@
 {
     "personalInfo": {
-        "name": "Alex Smith",
-        "jobTitle": "Software Engineer",
-        "phone": "9876-543-210",
-        "email": "alex.smith@email.com",
-        "linkedIn": "alexsmith",
-        "place": "Mumbai, India",
-        "careerObjective": "Passionate Software Engineer with five years of experience in full-stack development, seeking an opportunity to contribute to innovative projects in a dynamic environment."
+      "name": "Alex Smith",
+      "jobTitle": "Software Engineer",
+      "phone": "9876-543-210",
+      "email": "alex.smith@email.com",
+      "linkedIn": "alexsmith",
+      "place": "Mumbai, India",
+      "careerObjective": "Passionate Software Engineer with five years of experience in full-stack development, seeking an opportunity to contribute to innovative projects in a dynamic environment."
     },
     "education": [
-        {
-            "degree": "B.E. Computer Science",
-            "college": "Tech Valley Institute, Maharashtra",
-            "cgpa": "8.5",
-            "startYear": "2013",
-            "endYear": "2017"
-        }
+      {
+        "degree": "B.E. Computer Science",
+        "college": "Tech Valley Institute, Maharashtra",
+        "cgpa": "8.5",
+        "startYear": "2013",
+        "endYear": "2017"
+      }
     ],
     "workExperience": [
-        {
-            "jobTitle": "Software Engineer",
-            "company": "InnoTech Solutions",
-            "startYear": "2018",
-            "endYear": "2023",
-            "place": "Pune",
-            "workSummary": "Developed and optimized web applications using JavaScript and React. Led a team in implementing microservices architecture, improving application scalability by 40%."
-        }
+      {
+        "jobTitle": "Senior Software Engineer",
+        "company": "InnoTech Solutions",
+        "startYear": "2021",
+        "endYear": "2023",
+        "place": "Pune",
+        "workSummary": "Led a cross-functional team of 5 in building scalable enterprise applications using React, Node.js, and AWS. Migrated legacy systems to a microservices architecture, reducing system downtime by 50% and improving deployment cycles using CI/CD pipelines (Jenkins, Docker)."
+      },
+      {
+        "jobTitle": "Software Engineer",
+        "company": "InnoTech Solutions",
+        "startYear": "2018",
+        "endYear": "2021",
+        "place": "Pune",
+        "workSummary": "Developed interactive web interfaces with React.js and RESTful APIs with Node.js/Express. Integrated MongoDB and Redis for optimized backend performance. Participated in Agile ceremonies, performed code reviews, and mentored two junior developers."
+      },
+      {
+        "jobTitle": "Junior Developer (Internship)",
+        "company": "CodeCrafters Pvt. Ltd.",
+        "startYear": "2017",
+        "endYear": "2018",
+        "place": "Mumbai",
+        "workSummary": "Assisted in developing features for an internal HR system using Angular and PHP. Gained hands-on experience in Git version control and writing unit tests. Contributed to writing technical documentation and user manuals."
+      }
     ],
     "skills": [
-        {
-            "skill": "JavaScript"
-        },
-        {
-            "skill": "React.js"
-        },
-        {
-            "skill": "Node.js"
-        },
-        {
-            "skill": "MongoDB"
-        }
+      { "skill": "JavaScript" },
+      { "skill": "React.js" },
+      { "skill": "Node.js" },
+      { "skill": "MongoDB" },
+      { "skill": "Docker" },
+      { "skill": "AWS" },
+      { "skill": "Git & GitHub" },
+      { "skill": "CI/CD" }
     ]
-}
+  }
