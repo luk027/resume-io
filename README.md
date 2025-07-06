@@ -9,23 +9,16 @@
 - **User-Friendly UI** – Simple and clean interface for seamless experience.
 
 ## 🛠️ Tech Stack
-- **Frontend**: React.js, CSS
-- **Libraries Used**: `react-to-print`
-
-## 📦 Installation & Usage
-```sh
-# Clone the repository
-git clone https://github.com/luk027/resume-io.git
-
-# Navigate to the project directory
-cd resume-io
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm start
-```
+- **Framework**: React 18 (Vite-based project)
+- **Styling**: Tailwind CSS, MUI (Material UI & Joy UI), Emotion Styled
+- **Routing**: React Router v7
+- **Utilities**:
+  - `react-to-print` for printing resumes
+  - `react-web-share` for native share functionality
+  - `react-icons` for iconography
+  - `react-simple-wysiwyg` for rich text editing
+- **Deployment**: GitHub Pages using `gh-pages`
+- **Tooling**: ESLint, Vite, TypeScript (via types)
 
 ## 🎯 Contributing
 Feel free to fork this repo and submit pull requests to improve the project.
@@ -34,4 +27,5 @@ Feel free to fork this repo and submit pull requests to improve the project.
 This project is open-source and available under the MIT License.
 
 ---
+
 ⭐ **Star this repo** if you found it useful! Happy coding! 🚀
